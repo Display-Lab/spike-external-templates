@@ -1,8 +1,8 @@
 openapi: 3.0.2
 info:
   version: '1.0'
-  title: 'Hello, world'
-  description: An example of simple Knowledge Object
+  title: 'Display Lab Templates'
+  description: An externalized templates.json file meant to be used in the precision feedback pipeline
   license:
     name: GNU General Public License v3 (GPL-3)
     url: >-
@@ -12,27 +12,27 @@ info:
     email: kgrid-developers@umich.edu
     url: 'http://kgrid.org'
 servers:
-  - url: /js/simple
-    description: Hello world
+  - url: /displaylab/templates
+    description: An externalized templates.json file meant to be used in the precision feedback pipeline
 tags:
-  - name: KO Endpoints
-    description: Hello world Endpoints
+  - name: Display Lab Templates
+    description: An externalized templates.json file meant to be used in the precision feedback pipeline
 paths:
-  /welcome:
-    post:
+  /templates:
+    get:
       parameters:
-        - $ref: 'https://demo.kgrid.org/schemas/openapischemas.yaml#/components/parameters/apiversion'
-      tags:
-        - KO Endpoints
-      description: Welcome.
-      operationId: welcome
-      requestBody:
-        description: inputs
-        required: true
-        content:
-          application/json:
+        - in: query
+            name: v
             schema:
-              $ref: '#/components/schemas/input'
+              type: string
+              default:
+                $ref: '#/info/version'
+            required: true
+            description: the api version of the endpoint
+      tags:
+        - Display Lab Templates
+      description: An externalized templates.json file meant to be used in the precision feedback pipeline
+      operationId: templates
       responses:
         '200':
           description: response
@@ -40,23 +40,9 @@ paths:
             application/json:
               schema:
                 $ref: 'https://demo.kgrid.org/schemas/openapischemas.yaml#/components/schemas/genericresponse'
-            application/json;profile="minimal":
-              schema:
-                type: string
         default:
           description: unexpected error
           content:
             application/json:
               schema:
                 $ref: 'https://demo.kgrid.org/schemas/openapischemas.yaml#/components/schemas/genericerror'
-components:
-  schemas:
-    input:
-      required:
-        - name
-      properties:
-        name:
-          type: string
-          x-kgrid-label: 'Please enter your name'
-          x-kgrid-unit: ''
-          example: Bob

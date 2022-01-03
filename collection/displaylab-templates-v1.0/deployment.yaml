@@ -1,5 +1,4 @@
-/welcome:
-  post:
-    artifact: src/index.js
-    engine: javascript
-    function: welcome
+/templates:
+  get:
+    artifact: templates.json
+    engine: resource
