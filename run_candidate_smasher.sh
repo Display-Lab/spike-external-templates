@@ -5,6 +5,7 @@
 # performance.csv
 # templates.json
 # causal_pathways.json
+# outputs/spek_bs.json
 
 COL_WIDTH=30
 LOG_FILE=vignette.log
