@@ -18,7 +18,7 @@ date > ${LOG_FILE}
 # Run candidate smasher on spek (spek_bs.json) and templates
 printf "%-${COL_WIDTH}s" "Running CandidateSmasher..." | tee -a ${LOG_FILE}
 printf "\n" >> ${LOG_FILE}
-$DISPLAY_LAB_HOME/candidate-smasher/bin/cansmash --path=outputs/spek_bs.json --md-source=templates.json 2>> ${LOG_FILE} | jq . > outputs/spek_cs.json
+$DISPLAY_LAB_HOME/candidate-smasher/bin/cansmash --path=outputs/spek_bs.json --md-source=../knowledge-base/templates.json 2>> ${LOG_FILE} | jq . > outputs/spek_cs.json
 printf "exit status: %d\n" "${?}"
 
 printf "Log written to ${LOG_FILE}\n"

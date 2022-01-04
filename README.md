@@ -9,3 +9,9 @@ This repo is meant to demonstrate the following:
 
 ## Setup
 - Follow the instructions for setting up Display-Lab as detailed in the [Vert-Ramp-Affirmation](https://github.com/Display-Lab/vert-ramp-affirmation/blob/main/installation.md) repo
+- Run the existing pipeline script with flags for `-d` and/or `-k` locations (other flags set as needed). Running the pipeline from the data directory only requires setting the `-k` flag to reproduce existing behavior.
+```bash
+run_pipeline.sh -d sample-data  -k knowledge-base -o outputs -l .pfp.log
+```
+
+### Help (TBD)
