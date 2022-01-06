@@ -5,7 +5,7 @@
   "version":"v1.0",
   "title": "Display Lab Templates",
   "description":"An externalized templates.json file meant to be used in the precision feedback pipeline",
-  "hasServiceSpecification": "service.yaml",
+  "hasServiceSpecification": "service.md",
   "hasDeploymentSpecification": "deployment.yaml",
   "hasPayload": "templates.json",
   "@context" : ["http://kgrid.org/koio/contexts/knowledgeobject.jsonld" ]

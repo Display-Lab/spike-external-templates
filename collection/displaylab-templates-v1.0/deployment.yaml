@@ -1,4 +1,4 @@
 /templates:
   get:
     artifact: templates.json
-    engine: resource
+    engine: precision-feedback-pipeline
