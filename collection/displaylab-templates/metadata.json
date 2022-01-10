@@ -1,8 +1,8 @@
 {
-  "@id": "displaylab-templates-v1.0",
+  "@id": "displaylab-templates-v1.1",
   "@type":"koio:KnowledgeObject",
-  "identifier": "ark:/displaylab/templates/v1.0",
-  "version":"v1.0",
+  "identifier": "ark:/displaylab/templates/v1.1",
+  "version":"v1.1",
   "title": "Display Lab Templates",
   "description":"An externalized templates.json file meant to be used in the precision feedback pipeline",
   "hasServiceSpecification": "service.md",
